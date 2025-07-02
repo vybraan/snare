@@ -1,0 +1,31 @@
+package partials
+
+import (
+	"github/com/vybraan/snare/ui/layouts"
+	"github/com/vybraan/snare/components/button"
+	"github/com/vybraan/snare/components/card"
+)
+
+templ LogoutSuccess() {
+	@layouts.Base() {
+		<div class="w-full max-w-sm">
+			@card.Card() {
+				@card.Header() {
+					@card.Title() {
+						Logged Out Successfully
+					}
+					@card.Description() {
+						You have been logged out. Thank you for using our service!
+					}
+				}
+				@card.Content() {
+					<div class="flex flex-col gap-4">
+						@button.Button(button.Props{Href: "/", Variant: button.VariantOutline}) {
+							Home
+						}
+					</div>
+				}
+			}
+		</div>
+	}
+}

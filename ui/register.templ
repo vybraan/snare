@@ -1,0 +1,69 @@
+package ui
+
+import (
+	"github/com/vybraan/snare/ui/layouts"
+	"github/com/vybraan/snare/components/button"
+	"github/com/vybraan/snare/components/card"
+	"github/com/vybraan/snare/components/input"
+	"github/com/vybraan/snare/components/label"
+)
+
+templ Register() {
+	@layouts.Base() {
+		<div class="w-full max-w-sm">
+			@card.Card() {
+				@card.Header() {
+					@card.Title() {
+						Register
+					}
+					@card.Description() {
+						Create a new account to get started.
+					}
+				}
+				@card.Content() {
+					<form class="flex flex-col gap-4" method="POST" hx-post="/api/auth/register" hx-trigger="submit" hx-target="#toast">
+						<div class="w-full max-w-sm grid gap-2">
+							@label.Label(label.Props{
+								For: "username",
+							}) {
+								Username
+							}
+							@input.Input(input.Props{
+								ID:          "username",
+								Name:        "username",
+								Placeholder: "Choose a username",
+							})
+						</div>
+						<div class="w-full max-w-sm grid gap-2">
+							@label.Label(label.Props{
+								For: "password",
+							}) {
+								Password
+							}
+							@input.Input(input.Props{
+								ID:          "password",
+								Name:        "password",
+								Type:        input.TypePassword,
+								Placeholder: "Choose a password",
+							})
+						</div>
+						@button.Button(button.Props{Class: "w-full", Type: "submit"}) {
+							Register
+						}
+					</form>
+				}
+				@card.Footer(card.FooterProps{
+					Class: "flex justify-center",
+				}) {
+					<span class="text-sm">
+						Already have an account?
+						<a href="/auth/login" class=" hover:underline ml-1">
+							Login
+						</a>
+					</span>
+				}
+			}
+		</div>
+		<div id="toast"></div>
+	}
+}

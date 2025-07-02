@@ -1,0 +1,16 @@
+package partials
+
+import "github/com/vybraan/snare/components/toast"
+
+templ RegisterSuccess() {
+	@toast.Toast(toast.Props{
+		Description: "Successfully Registered. You can now log in.",
+		Title:       "Success",
+		Variant:     toast.VariantSuccess,
+	})
+	<script>
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 1500);
+    </script>
+}

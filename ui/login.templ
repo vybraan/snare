@@ -1,0 +1,92 @@
+package ui
+
+import (
+	"github/com/vybraan/snare/ui/layouts"
+	"github/com/vybraan/snare/components/button"
+	"github/com/vybraan/snare/components/card"
+	"github/com/vybraan/snare/components/input"
+	"github/com/vybraan/snare/components/label"
+)
+
+templ Login() {
+	@layouts.Base() {
+		<div class="w-full max-w-sm">
+			@card.Card() {
+				@card.Header() {
+					@card.Title() {
+						Login
+					}
+					@card.Description() {
+						Welcome back! Please enter your credentials to log in.
+					}
+				}
+				@card.Content() {
+					<form class="flex flex-col gap-4" method="POST" hx-post="/api/auth/login" hx-trigger="submit" hx-target="#toast">
+						<div class="w-full max-w-sm grid gap-2">
+							@label.Label(label.Props{
+								For: "username",
+							}) {
+								Username
+							}
+							@input.Input(input.Props{
+								ID:          "username",
+								Name:        "username",
+								Placeholder: "Enter your username",
+							})
+						</div>
+						<div class="w-full max-w-sm grid gap-2">
+							@label.Label(label.Props{
+								For: "password",
+							}) {
+								Password
+							}
+							@input.Input(input.Props{
+								ID:          "password",
+								Name:        "password",
+								Type:        input.TypePassword,
+								Placeholder: "Enter your password",
+							})
+						</div>
+						<div class="flex justify-end text-sm">
+							<a href="/auth/forgot" class="hover:underline">
+								Forgot password?
+							</a>
+						</div>
+						@button.Button(button.Props{Class: "w-full", ID: "login_btn", Type: "submit"}) {
+							Login
+						}
+					</form>
+				}
+				@card.Footer(card.FooterProps{
+					Class: "flex justify-center",
+				}) {
+					<span class="text-sm">
+						Don't have an account? 
+						<a href="/auth/register" class="hover:underline ml-1">
+							Register
+						</a>
+					</span>
+				}
+			}
+		</div>
+		<div id="toast"></div>
+		<script>
+        //check the auth state before rendering the package
+
+body = document.querySelector("body");
+
+        body.onload = function() {
+            fetch("/api/auth/state")
+                .then(response => response.json())
+                .then(data => {
+                console.log("Auth state:", data);
+                    if (data.status) {
+                        window.location.href = "/";
+                    }
+                })
+                .catch(error => console.error("Error checking auth state:", error));
+        };
+        
+        </script>
+	}
+}
