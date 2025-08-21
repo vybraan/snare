@@ -2,9 +2,9 @@ package snare
 
 import (
 	"database/sql"
-	"github/com/vybraan/snare/handlers/auth"
-	"github/com/vybraan/snare/helpers"
-	"github/com/vybraan/snare/middlewares"
+	"github.com/vybraan/snare/handlers/auth"
+	"github.com/vybraan/snare/helpers"
+	"github.com/vybraan/snare/middlewares"
 	"net/http"
 
 	"github.com/gin-contrib/sessions"

@@ -3,10 +3,10 @@ package auth
 import (
 	"database/sql"
 	"errors"
-	"github/com/vybraan/snare/components/toast"
-	"github/com/vybraan/snare/helpers"
-	"github/com/vybraan/snare/models"
-	"github/com/vybraan/snare/ui/partials"
+	"github.com/vybraan/snare/components/toast"
+	"github.com/vybraan/snare/helpers"
+	"github.com/vybraan/snare/models"
+	"github.com/vybraan/snare/ui/partials"
 	"net/http"
 	"strings"
 

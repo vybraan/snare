@@ -2,8 +2,8 @@ package main
 
 import (
 	"database/sql"
-	"github/com/vybraan/snare"
-	"github/com/vybraan/snare/database"
+	"github.com/vybraan/snare"
+	"github.com/vybraan/snare/database"
 	"log"
 
 	"github.com/gin-gonic/gin"

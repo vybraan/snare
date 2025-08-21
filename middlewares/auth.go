@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
-	"github/com/vybraan/snare/helpers"
+	"github.com/vybraan/snare/helpers"
 )
 
 // AuthRequired is a middleware that checks if the user has a valid session.

@@ -1,8 +1,8 @@
 package auth
 
 import (
-	"github/com/vybraan/snare/helpers"
-	"github/com/vybraan/snare/ui"
+	"github.com/vybraan/snare/helpers"
+	"github.com/vybraan/snare/ui"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

@@ -1,4 +1,4 @@
-module github/com/vybraan/snare
+module github.com/vybraan/snare
 
 go 1.24.4
 
