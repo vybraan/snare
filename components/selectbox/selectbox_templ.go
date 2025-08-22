@@ -13,10 +13,10 @@ import templruntime "github.com/a-h/templ/runtime"
 import (
 	"context"
 	"fmt"
-	"github/com/vybraan/snare/components/button"
-	"github/com/vybraan/snare/components/icon"
-	"github/com/vybraan/snare/components/popover"
-	"github/com/vybraan/snare/utils"
+	"github.com/vybraan/snare/components/button"
+	"github.com/vybraan/snare/components/icon"
+	"github.com/vybraan/snare/components/popover"
+	"github.com/vybraan/snare/utils"
 	"strconv"
 )
 

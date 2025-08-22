@@ -1,11 +1,11 @@
 package ui
 
 import (
-	"github/com/vybraan/snare/ui/layouts"
-	"github/com/vybraan/snare/components/button"
-	"github/com/vybraan/snare/components/card"
-	"github/com/vybraan/snare/components/input"
-	"github/com/vybraan/snare/components/label"
+	"github.com/vybraan/snare/ui/layouts"
+	"github.com/vybraan/snare/components/button"
+	"github.com/vybraan/snare/components/card"
+	"github.com/vybraan/snare/components/input"
+	"github.com/vybraan/snare/components/label"
 )
 
 templ Login() {
@@ -71,22 +71,21 @@ templ Login() {
 		</div>
 		<div id="toast"></div>
 		<script>
-        //check the auth state before rendering the package
+			//check the auth state before rendering the package
 
-body = document.querySelector("body");
+			body = document.querySelector("body");
 
-        body.onload = function() {
-            fetch("/api/auth/state")
-                .then(response => response.json())
-                .then(data => {
-                console.log("Auth state:", data);
-                    if (data.status) {
-                        window.location.href = "/";
-                    }
-                })
-                .catch(error => console.error("Error checking auth state:", error));
-        };
-        
-        </script>
+			body.onload = function () {
+				fetch("/api/auth/state")
+					.then((response) => response.json())
+					.then((data) => {
+						console.log("Auth state:", data);
+						if (data.status) {
+							window.location.href = "/";
+						}
+					})
+					.catch((error) => console.error("Error checking auth state:", error));
+			};
+		</script>
 	}
 }

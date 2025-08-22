@@ -9,11 +9,11 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"github/com/vybraan/snare/components/button"
-	"github/com/vybraan/snare/components/card"
-	"github/com/vybraan/snare/components/input"
-	"github/com/vybraan/snare/components/label"
-	"github/com/vybraan/snare/ui/layouts"
+	"github.com/vybraan/snare/components/button"
+	"github.com/vybraan/snare/components/card"
+	"github.com/vybraan/snare/components/input"
+	"github.com/vybraan/snare/components/label"
+	"github.com/vybraan/snare/ui/layouts"
 )
 
 func Register() templ.Component {

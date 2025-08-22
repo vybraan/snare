@@ -8,11 +8,11 @@ package layouts
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github/com/vybraan/snare/components/label"
-import "github/com/vybraan/snare/components/selectbox"
-import "github/com/vybraan/snare/components/popover"
-import "github/com/vybraan/snare/components/toast"
-import "github/com/vybraan/snare/components/progress"
+import "github.com/vybraan/snare/components/label"
+import "github.com/vybraan/snare/components/selectbox"
+import "github.com/vybraan/snare/components/popover"
+import "github.com/vybraan/snare/components/toast"
+import "github.com/vybraan/snare/components/progress"
 
 func Base() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {

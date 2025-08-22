@@ -9,9 +9,9 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"github/com/vybraan/snare/components/button"
-	"github/com/vybraan/snare/components/card"
-	"github/com/vybraan/snare/ui/layouts"
+	"github.com/vybraan/snare/components/button"
+	"github.com/vybraan/snare/components/card"
+	"github.com/vybraan/snare/ui/layouts"
 )
 
 func LogoutSuccess() templ.Component {

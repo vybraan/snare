@@ -11,7 +11,7 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"github/com/vybraan/snare/utils"
+	"github.com/vybraan/snare/utils"
 	"strconv"
 )
 

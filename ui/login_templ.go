@@ -9,11 +9,11 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"github/com/vybraan/snare/components/button"
-	"github/com/vybraan/snare/components/card"
-	"github/com/vybraan/snare/components/input"
-	"github/com/vybraan/snare/components/label"
-	"github/com/vybraan/snare/ui/layouts"
+	"github.com/vybraan/snare/components/button"
+	"github.com/vybraan/snare/components/card"
+	"github.com/vybraan/snare/components/input"
+	"github.com/vybraan/snare/components/label"
+	"github.com/vybraan/snare/ui/layouts"
 )
 
 func Login() templ.Component {
@@ -290,7 +290,7 @@ func Login() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 15, "</div><div id=\"toast\"></div><script>\n        //check the auth state before rendering the package\n\nbody = document.querySelector(\"body\");\n\n        body.onload = function() {\n            fetch(\"/api/auth/state\")\n                .then(response => response.json())\n                .then(data => {\n                console.log(\"Auth state:\", data);\n                    if (data.status) {\n                        window.location.href = \"/\";\n                    }\n                })\n                .catch(error => console.error(\"Error checking auth state:\", error));\n        };\n        \n        </script>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 15, "</div><div id=\"toast\"></div><script>\n\t\t\t//check the auth state before rendering the package\n\n\t\t\tbody = document.querySelector(\"body\");\n\n\t\t\tbody.onload = function () {\n\t\t\t\tfetch(\"/api/auth/state\")\n\t\t\t\t\t.then((response) => response.json())\n\t\t\t\t\t.then((data) => {\n\t\t\t\t\t\tconsole.log(\"Auth state:\", data);\n\t\t\t\t\t\tif (data.status) {\n\t\t\t\t\t\t\twindow.location.href = \"/\";\n\t\t\t\t\t\t}\n\t\t\t\t\t})\n\t\t\t\t\t.catch((error) => console.error(\"Error checking auth state:\", error));\n\t\t\t};\n\t\t</script>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

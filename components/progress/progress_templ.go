@@ -12,7 +12,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import (
 	"fmt"
-	"github/com/vybraan/snare/utils"
+	"github.com/vybraan/snare/utils"
 )
 
 type Size string

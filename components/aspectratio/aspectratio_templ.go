@@ -10,7 +10,7 @@ package aspectratio
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github/com/vybraan/snare/utils"
+import "github.com/vybraan/snare/utils"
 
 type Ratio string
 

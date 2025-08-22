@@ -1,6 +1,6 @@
 package partials
 
-import "github/com/vybraan/snare/components/toast"
+import "github.com/vybraan/snare/components/toast"
 
 templ LoginSuccess() {
 	@toast.Toast(toast.Props{
@@ -9,8 +9,8 @@ templ LoginSuccess() {
 		Variant:     toast.VariantSuccess,
 	})
 	<script>
-        setTimeout(function() {
-            window.location.href = '/';
-        }, 1500);
-    </script>
+		setTimeout(function () {
+			window.location.href = "/";
+		}, 1500);
+	</script>
 }
